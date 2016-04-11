@@ -1,0 +1,32 @@
+{
+  "name": "mlb-game-day",
+  "version": "0.1.0",
+  "description": "MLB GameDay API",
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "tslint src/*.ts",
+    "prepublish": "npm run lint && tsc",
+    "typings": "typings install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mjw56/mlb-game-day.git"
+  },
+  "keywords": [
+    "mlb",
+    "baseball",
+    "stats"
+  ],
+  "author": "Mike Wilcox <mwilcox56@gmail.com> (http://github.com/mjw56)",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.9.1"
+  },
+  "devDependencies": {
+    "expect": "^1.16.0",
+    "mocha": "^2.4.5",
+    "tslint": "^3.7.1",
+    "typescript": "^1.8.9",
+    "typings": "^0.7.12"
+  }
+}

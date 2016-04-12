@@ -1,1 +1,4 @@
-export { gameIds } from './games'
+export {
+    gameIds,
+    getGameById
+} from './games'

@@ -4,6 +4,7 @@
   "description": "MLB GameDay API",
   "main": "dist/index.js",
   "scripts": {
+    "build": "tsc",
     "lint": "tslint src/*.ts",
     "prepublish": "npm run lint && tsc",
     "typings": "typings install"
@@ -20,7 +21,8 @@
   "author": "Mike Wilcox <mwilcox56@gmail.com> (http://github.com/mjw56)",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.9.1"
+    "axios": "^0.9.1",
+    "es6-promise": "^3.1.2"
   },
   "devDependencies": {
     "expect": "^1.16.0",

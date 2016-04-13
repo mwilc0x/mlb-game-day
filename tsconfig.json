@@ -9,7 +9,6 @@
     "files": [
       "typings/browser.d.ts",
       "src/index.ts",
-      "src/api.ts",
-      "test/games.ts"
+      "src/api.ts"
     ]
 }

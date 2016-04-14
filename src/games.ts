@@ -1,8 +1,8 @@
 import { api } from './api'
-import { pad } from './utility'
+import { pad, split } from './utility'
 import { Promise } from 'es6-promise'
 
-export const gameIds = function(date: Date) {
+export const gameIds = function gameIds(date: Date) {
     if (!date) {
         date = new Date()
     }
@@ -20,18 +20,29 @@ export const gameIds = function(date: Date) {
         })
 }
 
-export const getGameById = function(id: string) {
+export const getGameBoxScoreById = function getGameBoxScoreById(id: string) {
     if (!id) {
         return Promise.reject('invalid id supplied')
     }
 
-    const tokens = id.split('_')
-
-    const day = tokens[2]
-    const month = tokens[1]
-    const year = tokens[0]
+    const { day, month, year } = split(id)
 
     const route = `year_${year}/month_${month}/day_${day}/gid_${id}/boxscore.json`
+
+    return api(route)
+        .then((result) => {
+            return result
+        })
+}
+
+export const getGameEventsById = function getGameEventsById(id: string) {
+    if (!id) {
+        return Promise.reject('invalid id supplied')
+    }
+
+    const { day, month, year } = split(id)
+
+    const route = `year_${year}/month_${month}/day_${day}/gid_${id}/game_events.json`
 
     return api(route)
         .then((result) => {

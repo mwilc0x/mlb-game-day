@@ -1,4 +1,5 @@
 export {
     gameIds,
-    getGameById
+    getGameBoxScoreById,
+    getGameEventsById
 } from './games'

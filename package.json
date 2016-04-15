@@ -34,7 +34,7 @@
     "expect": "^1.16.0",
     "mocha": "^2.4.5",
     "tslint": "^3.7.1",
-    "typescript": "^1.8.9",
+    "typescript": "^1.9.0-dev.20160414",
     "typings": "^0.7.12"
   }
 }

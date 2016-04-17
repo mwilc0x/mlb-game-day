@@ -31,7 +31,7 @@ export const getGameBoxScoreById = function getGameBoxScoreById(id: string) {
 
     return api(route)
         .then((result) => {
-            return result
+            return result.data.boxscore
         })
 }
 

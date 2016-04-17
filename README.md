@@ -63,7 +63,7 @@ gameIds(date).then(console.log);
 
 <hr>
 
-### <a id='gameIds'></a>[`getGameBoxScoreById(id)`](#getGameBoxScoreById)
+### <a id='getGameBoxScoreById'></a>[`getGameBoxScoreById(id)`](#getGameBoxScoreById)
 
 Retrieves the box score for the given game id.
 

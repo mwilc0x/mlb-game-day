@@ -34,6 +34,7 @@ typings will install the type definitions to a ```typings``` folder which contai
 
 - [`gameIds()`](#gameIds)
 - [`getGameBoxScoreById(id)`](#getGameBoxScoreById)
+- [`getGameEventsById(id)`](#getGameEventsById)
 
 ## Methods
 
@@ -82,11 +83,39 @@ import { gameIds, getGameBoxScoreById } from 'mlb-game-day';
 
 const date = new Date('4/8/2016');
 
-gameIds(date).then((ids) => {
-    return getGameBoxScoreById(ids[0]).then(console.log);
+gameIds(date).then(ids => {
+  getGameBoxScoreById(ids[0]).then(console.log)
 });
 
 // { home_sname: 'San Francisco', ... }
+```
+
+<hr>
+
+### <a id='getGameEventsById'></a>[`getGameEventsById(id)`](#getGameEventsById)
+
+Retrieves the game events for the given game id.
+
+#### Arguments
+
+1. `id` (*String*): The game id
+
+##### Returns
+
+(*Promise<Events>*): The events for the given id.
+
+##### Example
+
+```ts
+import { gameIds, getGameEventsById } from 'mlb-game-day';
+
+const date = new Date('4/8/2016');
+
+gameIds(date).then(ids => {
+  getGameEventsById(ids[0]).then(console.log)
+});
+
+// { inning: [ { num: 1, ... }, ... ], ... }
 ```
 
 # Use Locally

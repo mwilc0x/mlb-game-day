@@ -46,6 +46,6 @@ export const getGameEventsById = function getGameEventsById(id: string) {
 
     return api(route)
         .then((result) => {
-            return result
+            return result.data.game
         })
 }

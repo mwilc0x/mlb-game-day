@@ -1,6 +1,6 @@
 {
   "name": "mlb-game-day",
-  "version": "0.4.0",
+  "version": "0.7.0",
   "description": "MLB GameDay API",
   "main": "dist/index.js",
   "typings": "./index.d.ts",
